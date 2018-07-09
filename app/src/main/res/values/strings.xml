@@ -22,6 +22,7 @@
     <string name="title_activity_login_email">Sign in</string>
     <string name="sign_out">Sign Out</string>
     <string name="signed_out">Signed out</string>
+    <string name="continue_button">Continue</string>
 
 
 </resources>

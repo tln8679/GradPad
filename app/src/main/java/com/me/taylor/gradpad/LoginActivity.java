@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     protected Button fb_button;
     protected Button email_button;
     protected Button phone_button;
+    protected Button continue_button;
     private View mProgressView;
     private View mLoginFormView;
     private CallbackManager  callbackManager;
@@ -66,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         phone_button = findViewById(R.id.phone_button);
         mStatusTextView = findViewById(R.id.mStatusTextView);
         signOut = findViewById(R.id.sign_out);
+        continue_button = findViewById(R.id.continue_button);
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
@@ -120,8 +122,6 @@ public class LoginActivity extends AppCompatActivity {
                 updateUI(mAuth.getCurrentUser());
             }
         });
-
-
     }
 
 
@@ -252,8 +252,7 @@ public class LoginActivity extends AppCompatActivity {
             catch(Exception exception){
                 DISPLAY = user.getEmail();
                 }
-
-
+            continue_button.setVisibility(View.VISIBLE);
             signOut.setVisibility(View.VISIBLE);
             mStatusTextView.setVisibility(View.VISIBLE);
             mStatusTextView.setText(DISPLAY + " is signed in");
@@ -269,6 +268,7 @@ public class LoginActivity extends AppCompatActivity {
             // Hide
             mStatusTextView.setVisibility(View.GONE);
             signOut.setVisibility(View.GONE);
+            continue_button.setVisibility(View.GONE);
 
             // Show
             email_button.setVisibility(View.VISIBLE);
