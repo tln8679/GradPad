@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LoginActivity"
+    android:background="@color/lightGrey"
+    >
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/login_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/email_login_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/oswald_light"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingTop="50dp"
+                android:paddingBottom="50dp"
+                />
+
+
+
+            <com.firebase.ui.auth.util.ui.SupportVectorDrawablesButton
+                android:id="@+id/email_button"
+                android:layout_below="@+id/app_name"
+                style="@style/FirebaseUI.Button.AccountChooser.EmailButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/fui_sign_in_with_email"
+                />
+            <!-- Used in tests -->
+
+            <com.firebase.ui.auth.util.ui.SupportVectorDrawablesButton
+                android:id="@+id/phone_button"
+                style="@style/FirebaseUI.Button.AccountChooser.PhoneButton"
+                android:text="@string/fui_sign_in_with_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="23dp"
+                android:layout_below="@+id/email_button"
+
+                /> <!-- Used in tests -->
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phone_button"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="15dp"
+                android:paddingEnd="68dp"
+                android:paddingRight="68dp"
+                android:paddingLeft="15dp"
+                android:paddingStart="15dp"
+                android:paddingTop="15dp"
+                android:textSize="14sp"
+                tools:ignore="RtlSymmetry"
+                 />
+
+            <com.firebase.ui.auth.util.ui.SupportVectorDrawablesButton
+                android:id="@+id/sign_out"
+                style="@style/FirebaseUI.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/email_button"
+                android:layout_marginBottom="23dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorPrimary"
+                android:text="@string/sign_out"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/mStatusTextView"
+                android:layout_above="@+id/sign_out"
+                android:text=""
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                />
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

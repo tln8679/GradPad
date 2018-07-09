@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "822198442274",
+    "firebase_url": "https://gradpad-1530884340420.firebaseio.com",
+    "project_id": "gradpad-1530884340420",
+    "storage_bucket": "gradpad-1530884340420.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822198442274:android:8ba7bd6120e38432",
+        "android_client_info": {
+          "package_name": "com.me.taylor.gradpad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822198442274-chfc5jvnrp42l0nk7str31ogc6l98e2c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.me.taylor.gradpad",
+            "certificate_hash": "a5e359f4ad51f366dae99a90842bdf9b434e0080"
+          }
+        },
+        {
+          "client_id": "822198442274-49imi4l3l60kl464gsrmkbe1rsgptqpk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8EJUVqKwWIDcBDHd44Pb8p7vAimHzWvk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822198442274-49imi4l3l60kl464gsrmkbe1rsgptqpk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
